@@ -3,7 +3,7 @@
     "name"              :   "<%= name %>",
     "description"       :   "A generated plugin.",
     "namespace"         :   "<%= name %>",
-    "author"            :   "<%= type %>",
-    "type"              :   "<%= name %>",
+    "author"            :   "Author",
+    "type"              :   "<%= type %>",
     "serviceProvider"   :   "<%= name %>\\Providers\\<%= name %>ServiceProvider"
 }

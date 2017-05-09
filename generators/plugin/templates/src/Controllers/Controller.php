@@ -13,6 +13,6 @@ class <%= name %>Controller extends Controller
      */
     public function getHelloWorldPage(Twig $twig):string
     {
-        return $twig->render('<%= name %>::content.Index');
+        return $twig->render('<%= name %>::Index');
     }
 }

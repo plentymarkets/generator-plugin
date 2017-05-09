@@ -56,6 +56,12 @@ module.exports = class extends Generator {
       this.destinationPath('src/Providers/' + answers.name + 'RouteServiceProvider.php'),
       { name: answers.name}
     )
+
+    this.fs.copyTpl(
+      this.templatePath('src/Controllers/Controller.php'),
+      this.destinationPath('src/Controllers/' + answers.name + 'Controller.php'),
+      { name: answers.name}
+    )
   }
 
   _copyMetaFiles(answers) {
