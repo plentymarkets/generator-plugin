@@ -35,7 +35,7 @@ module.exports = class extends Generator {
 
     this.fs.copyTpl(
       this.templatePath('plugin.json'),
-      this.destinationPath('public/plugin.json'),
+      this.destinationPath('plugin.json'),
       { name: answers.name,  type: answers.type}
     )
 
@@ -47,13 +47,13 @@ module.exports = class extends Generator {
   _copyPhpFiles(answers) {
     this.fs.copyTpl(
       this.templatePath('src/Providers/ServiceProvider.php'),
-      this.destinationPath('public/src/Providers/' + answers.name + 'ServiceProvider.php'),
+      this.destinationPath('src/Providers/' + answers.name + 'ServiceProvider.php'),
       { name: answers.name}
     )
 
     this.fs.copyTpl(
       this.templatePath('src/Providers/RouteServiceProvider.php'),
-      this.destinationPath('public/src/Providers/' + answers.name + 'RouteServiceProvider.php'),
+      this.destinationPath('src/Providers/' + answers.name + 'RouteServiceProvider.php'),
       { name: answers.name}
     )
   }
@@ -61,7 +61,7 @@ module.exports = class extends Generator {
   _copyMetaFiles(answers) {
     this.fs.copyTpl(
       this.templatePath('meta'),
-      this.destinationPath('public/meta'),
+      this.destinationPath('meta'),
       { name: answers.name}
     )
   }
@@ -69,7 +69,7 @@ module.exports = class extends Generator {
   _copyTwigFiles(answers) {
     this.fs.copyTpl(
       this.templatePath('resources/views/Index.twig'),
-      this.destinationPath('public/resources/views/Index.twig'),
+      this.destinationPath('resources/views/Index.twig'),
       { name: answers.name}
     )
   }
