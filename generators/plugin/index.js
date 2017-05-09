@@ -14,7 +14,7 @@ module.exports = class extends Generator {
     return this.prompt([{
       type    : 'input',
       name    : 'name',
-      message : 'Your plugin name',
+      message : 'Your plugin name (UpperCamelCase)',
       default : this.appname // Default to current folder name
     },
     {
