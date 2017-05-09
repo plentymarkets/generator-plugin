@@ -1,0 +1,9 @@
+{
+    "version"           :   "0.0.1",
+    "name"              :   "<%= name %>",
+    "description"       :   "A theme for Ceres.",
+    "namespace"         :   "<%= name %>",
+    "author"            :   "<%= type %>",
+    "type"              :   "<%= name %>",
+    "serviceProvider"   :   "<%= name %>\\Providers\\<%= name %>ServiceProvider"
+}
