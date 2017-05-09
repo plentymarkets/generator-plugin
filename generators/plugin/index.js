@@ -39,6 +39,11 @@ module.exports = class extends Generator {
       { name: answers.name,  type: answers.type}
     )
 
+    this.fs.copyTpl(
+      this.templatePath('config.json'),
+      this.destinationPath('config.json')
+    )
+
     this._copyPhpFiles(answers)
     this._copyMetaFiles(answers)
     this._copyTwigFiles(answers)
