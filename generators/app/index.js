@@ -4,10 +4,10 @@ module.exports = class extends Generator {
   // The name `constructor` is important here
   constructor(args, opts) {
     // Calling the super constructor is important so our generator is correctly set up
-    super(args, opts);
+    super(args, opts)
 
     // Next, add your custom code
-    this.option('babel'); // This method adds support for a `--babel` flag
+    this.option('babel') // This method adds support for a `--babel` flag
   }
   
   prompting() {
@@ -18,9 +18,10 @@ module.exports = class extends Generator {
       default : this.appname // Default to current folder name
     },
     {
-      type    : 'input',
+      type    : 'list',
       name    : 'type',
       message : 'The plugin type',
+      choices : ['template', 'shipping', 'payment'],
       default : 'template',
       store   : true
     }]).then((answers) => {
@@ -36,30 +37,40 @@ module.exports = class extends Generator {
       this.templatePath('plugin.json'),
       this.destinationPath('public/plugin.json'),
       { name: answers.name,  type: answers.type}
-    );
+    )
 
+    this._copyPhpFiles(answers)
+    this._copyMetaFiles(answers)
+    this._copyTwigFiles(answers)
+  }
+
+  _copyPhpFiles(answers) {
     this.fs.copyTpl(
       this.templatePath('src/Providers/ServiceProvider.php'),
       this.destinationPath('public/src/Providers/' + answers.name + 'ServiceProvider.php'),
       { name: answers.name}
-    );
+    )
 
     this.fs.copyTpl(
       this.templatePath('src/Providers/RouteServiceProvider.php'),
       this.destinationPath('public/src/Providers/' + answers.name + 'RouteServiceProvider.php'),
       { name: answers.name}
-    );
+    )
+  }
 
-    this.fs.copyTpl(
-      this.templatePath('resources/views/Index.twig'),
-      this.destinationPath('public/resources/views/Index.twig'),
-      { name: answers.name}
-    );
-
+  _copyMetaFiles(answers) {
     this.fs.copyTpl(
       this.templatePath('meta'),
       this.destinationPath('public/meta'),
       { name: answers.name}
-    );
+    )
+  }
+
+  _copyTwigFiles(answers) {
+    this.fs.copyTpl(
+      this.templatePath('resources/views/Index.twig'),
+      this.destinationPath('public/resources/views/Index.twig'),
+      { name: answers.name}
+    )
   }
 }

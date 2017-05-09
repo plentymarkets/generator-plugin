@@ -10,4 +10,4 @@ A plugin generator for plentymarkets plugins.
 
 ## Commands
 
-* `yo plenty` generate new basic plugin files.
+* `yo plenty` generates new basic plugin files.
