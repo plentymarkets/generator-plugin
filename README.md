@@ -4,7 +4,8 @@ A plugin generator for plentymarkets plugins.
 
 ## Getting started
 
-- Install: `npm install -g yo generator-plenty`
+- Install Yeoman: `npm install -g yo`
+- Install generator: Pull the generator-plenty repo and `npm link` it to make it global.
 - Run: `yo plenty:plugin`
 
 
