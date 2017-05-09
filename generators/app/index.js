@@ -55,5 +55,11 @@ module.exports = class extends Generator {
       this.destinationPath('public/resources/views/Index.twig'),
       { name: answers.name}
     );
+
+    this.fs.copyTpl(
+      this.templatePath('meta'),
+      this.destinationPath('public/meta'),
+      { name: answers.name}
+    );
   }
 }
