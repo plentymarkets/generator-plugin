@@ -1,1 +1,1 @@
-[https://www.plentymarkets.eu/](https://www.plentymarkets.eu/)
+[Weitere Informationen](https://developers.plentymarkets.com/marketplace/plugin-requirements#marketplace-support-contact)

@@ -1,7 +1,6 @@
 # Release Notes für <%= name %>
 
-## v0.0.1 
+## v<%= version %>
 
-### Funktionen
-
-
+### Hinzugefügt
+[Weitere Informationen](https://developers.plentymarkets.com/marketplace/plugin-requirements#marketplace-changelog)
