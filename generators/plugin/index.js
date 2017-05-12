@@ -19,15 +19,45 @@ module.exports = class extends Generator {
     },
     {
       type    : 'input',
-      name    : 'description',
-      message : 'Your plugin description'
+      name    : 'author',
+      message : 'The plugin author'
+    },
+    {
+      type    : 'input',
+      name    : 'license',
+      message : 'The plugin license',
+      default : 'MIT'
+    },
+    {
+      type    : 'input',
+      name    : 'shortDescription',
+      message : 'Your plugin short description'
+    },
+    {
+      type    : 'input',
+      name    : 'price',
+      message : 'The price of your plugin',
+      default : 0.00
+    },
+    {
+      type    : 'input',
+      name    : 'version',
+      message : 'Your plugin version',
+      default : '0.0.1'
+    },
+    {
+      type    : 'list',
+      name    : 'categories',
+      message : 'The plugin type',
+      choices : ['3523', '3518', 'shipping', 'payment', 'general'],
+      default : '3523'
     },
     {
       type    : 'list',
       name    : 'type',
       message : 'The plugin type',
-      choices : ['template', 'theme', 'shipping', 'payment', 'general'],
-      default : 'template',
+      choices : ['general', 'template', 'theme', 'shipping', 'payment'],
+      default : 'general',
       store   : true
     }]).then((answers) => {
       this.config.set("answers", answers)
