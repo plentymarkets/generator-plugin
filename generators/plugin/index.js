@@ -15,13 +15,18 @@ module.exports = class extends Generator {
       type    : 'input',
       name    : 'name',
       message : 'Your plugin name (UpperCamelCase)',
-      default : this.appname // Default to current folder name
+      default : this.appname
+    },
+    {
+      type    : 'input',
+      name    : 'description',
+      message : 'Your plugin description'
     },
     {
       type    : 'list',
       name    : 'type',
       message : 'The plugin type',
-      choices : ['template', 'shipping', 'payment'],
+      choices : ['template', 'theme', 'shipping', 'payment', 'general'],
       default : 'template',
       store   : true
     }]).then((answers) => {

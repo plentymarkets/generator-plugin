@@ -1,7 +1,7 @@
 {
     "version"           :   "0.0.1",
     "name"              :   "<%= name %>",
-    "description"       :   "A generated plugin.",
+    "description"       :   "<%= description %>",
     "namespace"         :   "<%= name %>",
     "author"            :   "Author",
     "type"              :   "<%= type %>",
