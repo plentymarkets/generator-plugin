@@ -1,7 +1,9 @@
 {
   "name": "@plentymarkets/generator-plugin",
   "version": "1.0.0",
+  "homepage": "https://github.com/plentymarkets/generator-plugin#readme",
   "author": "plentymarkets",
+  "license": "MIT",
   "description": "Generator for plentymarkets plugins.",
   "repository": {
     "type": "git",
