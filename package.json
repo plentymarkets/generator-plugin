@@ -1,6 +1,6 @@
 {
-  "name": "generator-plenty",
-  "version": "0.1.0",
+  "name": "generator-plugin",
+  "version": "1.0.0",
   "description": "",
   "files": [
     "generators"

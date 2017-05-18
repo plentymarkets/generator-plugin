@@ -72,8 +72,7 @@ module.exports = class extends Generator {
                         'shipping',
                         'payment'
                     ],
-                    default: 'general',
-                    store  : true
+                    default: 'theme'
                 }
             ]).then((answers) => {
                 this.config.set("answers", answers)
