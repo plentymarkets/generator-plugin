@@ -4,14 +4,14 @@ A plugin generator for plentymarkets plugins.
 
 ## Getting started
 
-- Install Yeoman: `npm install -g yo`
+- Install Yeoman: `npm install -g yo @plentymarkets/generator-plugin`
 - Install generator: Pull the generator-plenty repo and `npm link` it to make it global.
-- Run: `yo plenty:plugin`
+- Run: `yo plugin`
 
 
 ## Commands
 
-* `yo plenty:plugin` generates new basic plugin files. The folder structure will look like this:
+* `yo plugin` generates new basic plugin files. The folder structure will look like this:
 
 ```
 [Plugin]/
@@ -36,7 +36,7 @@ A plugin generator for plentymarkets plugins.
     └── plugin.json // plugin information
 ```
 
-* `yo plenty:plugin-theme` generates new theme plugin files. The folder structure will look like this:
+* `yo plugin:theme` generates new theme plugin files. The folder structure will look like this:
 
 ```
 [Theme]/
