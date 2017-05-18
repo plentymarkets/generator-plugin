@@ -49,17 +49,17 @@ module.exports = class extends Generator {
                     default: '0.0.1'
                 },
                 {
-                    type   : 'list',
+                    type   : 'checkbox',
                     name   : 'categories',
-                    message: 'The plugin type',
+                    message: 'The plugin category',
                     choices: [
-                        '3523',
-                        '3518',
-                        'shipping',
-                        'payment',
-                        'general'
-                    ],
-                    default: '3523'
+                        {value: '3523', name: 'Markets'},
+                        {value: '3518', name: 'Themes', checked: true},
+                        {value: '3517', name: 'Templates'},
+                        {value: '3527', name: 'Widgets'},
+                        {value: '3519', name: 'Payment'},
+                        {value: '3521', name: 'Integration'}
+                    ]
                 },
                 {
                     type   : 'list',
