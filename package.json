@@ -1,7 +1,12 @@
 {
-  "name": "generator-plugin",
+  "name": "@plentymarkets/generator-plugin",
   "version": "1.0.0",
-  "description": "",
+  "author": "plentymarkets",
+  "description": "Generator for plentymarkets plugins.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://plentymarkets@github.com/plentymarkets/generator-plugin.git"
+  },
   "files": [
     "generators"
   ],
