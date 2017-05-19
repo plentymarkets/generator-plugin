@@ -3,8 +3,8 @@
 namespace <%= name %>\Providers;
 
 use Plenty\Plugin\ServiceProvider;
-use Plenty\Log\Services\ReferenceContainer;
 use Plenty\Plugin\Events\Dispatcher;
+use IO\Helper\TemplateContainer;
 
 /**
  * Class <%= name %>ServiceProvider
@@ -19,11 +19,12 @@ class <%= name %>ServiceProvider extends ServiceProvider
         
     }
 
-    public function boot(Twig $twig, ReferenceContainer $container, Dispatcher $dispatcher)
+    public function boot(Dispatcher $dispatcher)
     {
        	// Override template
-        $dispatcher->listen("IO.tpl.home", function (TemplateContainer $container) {
-            $container->setTemplate(<%= name %>::Homepage.Homepage);
+        $dispatcher->listen('IO.tpl.home', function (TemplateContainer $container) {
+            $container->setTemplate('<%= name %>::Homepage.Homepage');
+            return false;
         }, self::PRIORITY);
     }
 }
