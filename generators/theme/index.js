@@ -130,8 +130,8 @@ module.exports = class extends Generator {
     _copyTwigFiles(answers)
     {
         this.fs.copyTpl(
-            this.templatePath('resources/views/Theme.twig'),
-            this.destinationPath('resources/views/Theme.twig'),
+            this.templatePath('resources/views'),
+            this.destinationPath('resources/views'),
             {name: answers.name}
         )
     }
