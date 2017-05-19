@@ -5,12 +5,12 @@ A plugin generator for plentymarkets plugins.
 ## Getting started
 
 - Install Yeoman: `npm install -g yo @plentymarkets/generator-plugin`
-- Run: `yo plugin`
+- Run: `yo @plentymarkets/plugin`
 
 
 ## Commands
 
-* `yo plugin` generates new basic plugin files. The folder structure will look like this:
+* `yo @plentymarkets/plugin` generates new basic plugin files. The folder structure will look like this:
 
 ```
 [Plugin]/
@@ -35,7 +35,7 @@ A plugin generator for plentymarkets plugins.
     └── plugin.json // plugin information
 ```
 
-* `yo plugin:theme` generates new theme plugin files. The folder structure will look like this:
+* `yo @plentymarkets/plugin:theme` generates new theme plugin files. The folder structure will look like this:
 
 ```
 [Theme]/
@@ -49,7 +49,9 @@ A plugin generator for plentymarkets plugins.
     │   ├── css/
     │   │   └── main.css    
     │   └── views/
-    │       └── Theme.twig
+    │       ├── Theme.twig
+    │       └── Homepage/
+    │           └── Homepage.twig
     │
     ├── src/
     │   ├── Providers/
