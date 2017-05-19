@@ -1,6 +1,6 @@
 {
   "name": "@plentymarkets/generator-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/plentymarkets/generator-plugin#readme",
   "author": "plentymarkets",
   "license": "MIT",
@@ -12,7 +12,9 @@
   "files": [
     "generators"
   ],
-  "keywords": ["yeoman-generator"],
+  "keywords": [
+    "yeoman-generator"
+  ],
   "dependencies": {
     "yeoman-generator": "^1.0.0"
   }
