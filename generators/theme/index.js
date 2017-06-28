@@ -1,4 +1,4 @@
-var Generator = require('yeoman-generator')
+const Generator = require('yeoman-generator')
 
 module.exports = class extends Generator {
     // The name `constructor` is important here
@@ -18,7 +18,8 @@ module.exports = class extends Generator {
                     type   : 'input',
                     name   : 'name',
                     message: 'Your plugin name (UpperCamelCase)',
-                    default: this.appname
+                    default: this.appname,
+                    validate: this._validatePluginName
                 },
                 {
                     type   : 'input',
@@ -134,5 +135,19 @@ module.exports = class extends Generator {
             this.destinationPath('resources/views'),
             {name: answers.name}
         )
+    }
+
+    _validatePluginName(input)
+    {
+        const regex = /[A-Z][a-zA-Z0-9]+/;
+            
+        if(input.match(regex))
+        {
+            return true;
+        }
+        else
+        {
+            return "Invalid plugin name. Please use alphanumeric characters in UpperCamelCase only."
+        }
     }
 }

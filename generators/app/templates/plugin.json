@@ -5,8 +5,8 @@
     "shortDescription"  :   "<%= answers.shortDescription %>",
     "namespace"         :   "<%= answers.name %>",
     "author"            :   "<%= answers.author %>",
-    "price"             :   "<%= answers.price %>",
-    "categories"        :   "[<%= answers.categories %>]",
+    "price"             :   <%= answers.price %>,
+    "categories"        :   [<%= answers.categories %>],
     "type"              :   "<%= answers.type %>",
     "serviceProvider"   :   "<%= answers.name %>\\Providers\\<%= answers.name %>ServiceProvider"
 }
