@@ -35,7 +35,7 @@ module.exports = class extends Generator {
                 {
                     type   : 'input',
                     name   : 'shortDescription',
-                    message: 'Your plugin short description'
+                    message: 'Your plugin short description (DE)'
                 },
                 {
                     type   : 'input',
