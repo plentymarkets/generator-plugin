@@ -2,7 +2,7 @@
     "version"           :   "<%= answers.version %>",
     "license"           :   "<%= answers.license %>",
     "name"              :   "<%= answers.name %>",
-    "shortDescription"  :   { "de": "<%= answers.shortDescription %>", "en": "" },
+    "shortDescription"  :   { "de": "<%= answers.shortDescription %>", "en": "TODO add manually" },
     "namespace"         :   "<%= answers.name %>",
     "author"            :   "<%= answers.author %>",
     "price"             :   <%= answers.price %>,
