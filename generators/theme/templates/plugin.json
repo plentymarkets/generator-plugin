@@ -1,13 +1,12 @@
 {
-    "version"           :   "<%= answers.version %>",
-    "license"           :   "<%= answers.license %>",
     "name"              :   "<%= answers.name %>",
-    "shortDescription"  :   { "de": "<%= answers.shortDescription %>", "en": "TODO add manually" },
     "namespace"         :   "<%= answers.name %>",
-    "author"            :   "<%= answers.author %>",
-    "price"             :   <%= answers.price %>,
-    "categories"        :   [<%= answers.categories %>],
     "type"              :   "<%= answers.type %>",
+    "version"           :   "<%= answers.version %>",
+    "pluginIcon"        :   "icon_plugin_xs.png",
+    "description"       :   "<%= answers.description %>",
+    "author"            :   "<%= answers.author %>",
+    "authorIcon"        :   "icon_author_xs.png",
     "serviceProvider"   :   "<%= answers.name %>\\Providers\\<%= answers.name %>ServiceProvider",
     "dataProviders"     :
     [
