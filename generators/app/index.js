@@ -17,64 +17,43 @@ module.exports = class extends Generator {
                 {
                     type   : 'input',
                     name   : 'name',
-                    message: 'Your plugin name (UpperCamelCase)',
+                    message: 'Enter the name of the plugin in UpperCamelCase',
                     default: this.appname,
                     validate: this._validatePluginName
                 },
                 {
                     type   : 'input',
                     name   : 'author',
-                    message: 'The plugin author'
-                },
-                {
-                    type   : 'input',
-                    name   : 'license',
-                    message: 'The plugin license',
-                    default: 'MIT'
-                },
-                {
-                    type   : 'input',
-                    name   : 'shortDescription',
-                    message: 'Your plugin short description (DE)'
-                },
-                {
-                    type   : 'input',
-                    name   : 'price',
-                    message: 'The price of your plugin',
-                    default: 0.00
-                },
-                {
-                    type   : 'input',
-                    name   : 'version',
-                    message: 'Your plugin version',
-                    default: '0.0.1'
-                },
-                {
-                    type   : 'checkbox',
-                    name   : 'categories',
-                    message: 'The plugin category',
-                    choices: [
-                        {value: '3523', name: 'Markets'},
-                        {value: '3518', name: 'Themes'},
-                        {value: '3517', name: 'Templates'},
-                        {value: '3527', name: 'Widgets'},
-                        {value: '3519', name: 'Payment'},
-                        {value: '3521', name: 'Integration'}
-                    ]
+                    message: 'Enter your name'
                 },
                 {
                     type   : 'list',
                     name   : 'type',
-                    message: 'The plugin type',
+                    message: 'Select the type of the plugin',
                     choices: [
                         'general',
                         'template',
                         'theme',
+                        'export',
+                        'payment',
+                        'backend',
                         'shipping',
-                        'payment'
+                        'widget',
+                        'integration'
                     ],
                     default: 'general',
                     store  : true
+                },
+                {
+                    type   : 'input',
+                    name   : 'description',
+                    message: 'Your plugin description'
+                },
+                {
+                    type   : 'input',
+                    name   : 'version',
+                    message: 'Enter the plugin version in the format MAJOR.MINOR.PATCH',
+                    default: '0.0.1'
                 }
             ]).then((answers) => {
                 this.config.set("answers", answers)
